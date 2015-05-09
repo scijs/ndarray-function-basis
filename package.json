@@ -1,0 +1,34 @@
+{
+  "name": "ndarray-vandermonde",
+  "version": "1.0.0",
+  "description": "Construct Vandermonde matrices with ndarrays",
+  "main": "index.js",
+  "author": "Ricky Reusser",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scijs/ndarray-vandermonde.git"
+  },
+  "scripts": {
+    "test": "node test/**",
+    "lint": "jshint **.js"
+  },
+  "keywords": [
+    "linearalgebra",
+    "matrix",
+    "vandermonde",
+    "least squares",
+    "ndarray",
+    "scijs"
+  ],
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4",
+    "ndarray": "^1.0.16",
+    "ndarray-tests": "^1.1.3"
+  },
+  "dependencies": {
+    "ndarray-fill": "^1.0.1",
+    "zeros": "^1.0.0"
+  }
+}
