@@ -30,7 +30,7 @@ var f1 = function(x) { return 1; }
 var f3 = Math.sin;
 var f4 = Math.cos;
 
-var y = basis(x, [f1, f2, f3]);
+var A = basis(x, [f1, f2, f3]);
 ```
 
 ## See also:
