@@ -14,7 +14,6 @@ This module extends the idea of a [Vandermonde matrix](http://en.wikipedia.org/w
 - `functions`: an `Array` of functions that take a `Number` as input and return a `Number` as output
 - `dtype` (optional): the datatype of the output array, as listed in the [ndarray documentation](https://www.npmjs.com/package/ndarray).
 
-
 ## Example
 
 For example, to construct a sinusoidal basis with period `2*pi` and a constant offset,
