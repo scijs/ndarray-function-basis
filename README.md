@@ -1,6 +1,6 @@
 # ndarray-function-basis
 
-[![Build Status](https://travis-ci.org/scijs/ndarray-function-basis.svg)](https://travis-ci.org/scijs/ndarray-function-basis)
+[![Build Status](https://travis-ci.org/scijs/ndarray-function-basis.svg)](https://travis-ci.org/scijs/ndarray-function-basis) [![npm version](https://badge.fury.io/js/ndarray-function-basis.svg)](http://badge.fury.io/js/ndarray-function-basis)
 
 Construct an ndarray basis given a sequence of points and functions
 
