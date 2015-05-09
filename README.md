@@ -34,8 +34,8 @@ var y = basis(x, [f1, f2, f3]);
 
 ## See also:
 
-[ndarray-householder-qr](https://www.npmjs.com/package/ndarray-householder-qr): Householder QR for least squares curve-fitting
-[ndarray-vandermonde](https://www.npmjs.com/package/ndarray-vandermonde): Construct a Vandermonde (polynomial) basis
+- [ndarray-householder-qr](https://www.npmjs.com/package/ndarray-householder-qr): Householder QR for least squares curve-fitting
+- [ndarray-vandermonde](https://www.npmjs.com/package/ndarray-vandermonde): Construct a Vandermonde (polynomial) basis
 
 ## Credits
 (c) 2015 Ricky Reusser. MIT License
