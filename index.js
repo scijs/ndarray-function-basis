@@ -5,7 +5,7 @@ var zeros = require('zeros'),
 
 module.exports = function( x, functions, dtype ) {
 
-  var i, m, n, dtype, v;
+  var i, m, n, v;
 
   if( x.dimension !== 1 ) {
     throw new TypeError('ndarray-function-basis():: error: x must be a dimension-1 vector.');
@@ -31,4 +31,4 @@ module.exports = function( x, functions, dtype ) {
   });
   
   return v;
-}
+};

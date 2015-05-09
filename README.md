@@ -1,34 +1,41 @@
-# ndarray-vandermonde
+# ndarray-function-basis
 
-[![Build Status](https://travis-ci.org/scijs/ndarray-vandermonde.svg?branch=1.0.0)](https://travis-ci.org/scijs/ndarray-vandermonde) [![npm version](https://badge.fury.io/js/ndarray-vandermonde.svg)](http://badge.fury.io/js/ndarray-vandermonde)
-
-Construct an ndarray vandermonde matrix
+Construct an ndarray basis given a sequence of points and functions
 
 ## Introduction
 
-A [Vandermonde matrix](http://en.wikipedia.org/wiki/Vandermonde_matrix) is a matrix with format:
-
-![Vandermonde](/docs/images/vandermonde.png)
-
-It's useful for least squares fits, among other things, in which you want a set of basis vectors that are successive powers of a variable evaluated at specific points. It's usually just plug and chug into QR or SVD in order to solve the least squares problem.
+This module extends the idea of a [Vandermonde matrix](http://en.wikipedia.org/wiki/Vandermonde_matrix) to a sequence of arbitrary functions. It constructs a set of basis vectors that can be used in a least squares curve fit.
 
 ## Usage
 
-`vander( x [, N] [, reversed] )`
+`basis( x, functions [, dtype])`
 
-`x` is a vector of numbers, `N` is the width of the resulting matrix (i.e. the highest power + 1), and `reversed` is a flag that will reverse the columns of the resulting matrix so that higher powers are on the left.
+- `x`: a vector of numbers for the independent variable at which the functions are evaluated
+- `functions`: an `Array` of functions that take a `Number` as input and return a `Number` as output
+- `dtype` (optional): the datatype of the output array, as listed in the [ndarray documentation](https://www.npmjs.com/package/ndarray).
 
-For example,
+
+## Example
+
+For example, to construct a sinusoidal basis with period `2*pi` and a constant offset,
 
 ```
-var vander = require('ndarray-vandermonde'),
+var basis = require('ndarray-function-basis'),
     ndarray = require('ndarray');
 
-var x = ndarray(Float64Array([1,2,3,4]));
+var x = ndarray([1,2,3,4]);
 
-var y = vander(x);
+var f1 = function(x) { return 1; }
+var f3 = Math.sin;
+var f4 = Math.cos;
+
+var y = basis(x, [f1, f2, f3]);
 ```
 
+## See also:
+
+[ndarray-householder-qr](https://www.npmjs.com/package/ndarray-householder-qr): Householder QR for least squares curve-fitting
+[ndarray-vandermonde](https://www.npmjs.com/package/ndarray-vandermonde): Construct a Vandermonde (polynomial) basis
 
 ## Credits
 (c) 2015 Ricky Reusser. MIT License

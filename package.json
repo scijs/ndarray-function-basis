@@ -1,16 +1,16 @@
 {
-  "name": "ndarray-vandermonde",
-  "version": "1.0.0",
-  "description": "Construct Vandermonde matrices with ndarrays",
+  "name": "ndarray-function-basis",
+  "version": "1.0.1",
+  "description": "Construct an ndarray basis given a sequence of points and functions",
   "main": "index.js",
   "author": "Ricky Reusser",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/scijs/ndarray-vandermonde.git"
+    "url": "git://github.com/scijs/ndarray-function-basis.git"
   },
   "scripts": {
-    "test": "node test/**",
+    "test": "mocha",
     "lint": "jshint **.js"
   },
   "keywords": [
@@ -23,6 +23,7 @@
   ],
   "devDependencies": {
     "chai": "^2.3.0",
+    "jshint": "^2.7.0",
     "mocha": "^2.2.4",
     "ndarray": "^1.0.16",
     "ndarray-tests": "^1.1.3"
