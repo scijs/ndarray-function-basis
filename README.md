@@ -1,5 +1,7 @@
 # ndarray-function-basis
 
+[![Build Status](https://travis-ci.org/scijs/ndarray-function-basis.svg)](https://travis-ci.org/scijs/ndarray-function-basis)
+
 Construct an ndarray basis given a sequence of points and functions
 
 ## Introduction
