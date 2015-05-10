@@ -10,10 +10,10 @@ This module extends the idea of a [Vandermonde matrix](http://en.wikipedia.org/w
 
 ## Usage
 
-`basis( x, functions [, dtype])`
+`basis( x, functionList [, dtype])`
 
 - `x`: a vector of numbers for the independent variable at which the functions are evaluated
-- `functions`: an `Array` of functions that take a `Number` as input and return a `Number` as output
+- `FunctionList`: an `Array` of `function`s that take a `Number` as input and return a `Number` as output
 - `dtype` (optional): the datatype of the output array, as listed in the [ndarray documentation](https://www.npmjs.com/package/ndarray).
 
 ## Example
