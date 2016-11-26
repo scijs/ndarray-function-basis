@@ -2,35 +2,34 @@
 
 [![Build Status](https://travis-ci.org/scijs/ndarray-function-basis.svg)](https://travis-ci.org/scijs/ndarray-function-basis) [![npm version](https://badge.fury.io/js/ndarray-function-basis.svg)](http://badge.fury.io/js/ndarray-function-basis)
 
-Construct an ndarray basis given a sequence of points and functions
+Construct an basis ndarray given a sequence of values and functions
 
 ## Introduction
 
-This module extends the idea of a [Vandermonde matrix](http://en.wikipedia.org/wiki/Vandermonde_matrix) to a sequence of arbitrary functions. It constructs a set of basis vectors that can be used in a least squares curve fit.
+This module extends the [Vandermonde matrix](http://en.wikipedia.org/wiki/Vandermonde_matrix) to a list of numbers or functions. It constructs a set of basis vectors that can be used in a least squares curve fit. It's little more than a thin convenience wrapper around [ndarray-fill](https://github.com/scijs/ndarray-fill).
 
 ## Usage
 
-`basis( x, functions [, dtype])`
+#### `require([dest, ]x, inputs)`
 
-- `x`: a vector of numbers for the independent variable at which the functions are evaluated
-- `functions`: an `Array` of functions that take a `Number` as input and return a `Number` as output
-- `dtype` (optional): the datatype of the output array, as listed in the [ndarray documentation](https://www.npmjs.com/package/ndarray).
+- `dest`: a destination array. If not provided, an [`ndarray` of type `'array'`](https://github.com/scijs/ndarray#arraydtype) will be created. If provided, the first dimension must match the length of `x`, and the second must match the length of `inputs`.
+- `x`: a ndarray of numbers at which the inputs are evaluated
+- `inputs`: an `Array` of either `Functions` or `Numbers`. If a `Function`, it is evaluated at `x`; if a `Number`, `x` is ignored for this input.
 
 ## Example
 
-For example, to construct a sinusoidal basis with period `2*pi` and a constant offset,
+For example, to construct a sinusoidal basis with period `2 * π` and a constant offset,
 
 ```
-var basis = require('ndarray-function-basis'),
-    ndarray = require('ndarray');
+var basis = require('ndarray-function-basis');
+var ndarray = require('ndarray');
 
-var x = ndarray([1,2,3,4]);
-
-var f1 = function(x) { return 1; }
-var f3 = Math.sin;
-var f4 = Math.cos;
-
-var y = basis(x, [f1, f2, f3]);
+basis(ndarray([1, 2, 3, 4]), [1, Math.sin, Math.cos]);
+// => 
+//  1.000    0.841    0.540
+//  1.000    0.909   -0.416
+//  1.000    0.141   -0.990
+//  1.000   -0.757   -0.654
 ```
 
 ## See also:
