@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/scijs/ndarray-function-basis.svg)](https://travis-ci.org/scijs/ndarray-function-basis) [![npm version](https://badge.fury.io/js/ndarray-function-basis.svg)](http://badge.fury.io/js/ndarray-function-basis) [![Dependency Status](https://david-dm.org/scijs/ndarray-function-basis.svg)](https://david-dm.org/scijs/ndarray-function-basis)
 
-Construct an basis ndarray given a sequence of values and functions
+> Construct an basis ndarray given a list of values and functions
 
 ## Introduction
 
